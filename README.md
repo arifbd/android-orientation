@@ -7,6 +7,7 @@ android layout orientation for beginners
               
 ##### Step 2: Add the following code to res/layout/activity_main.xml.
 
+```
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -63,7 +64,7 @@ android layout orientation for beginners
         android:textStyle="italic" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
-
+```
 
 ##### Step 3: Create *layout-land* directory under *res* directory
               Right click on *res* directory ⇒ New ⇒ Android Resource Directory
@@ -76,6 +77,7 @@ android layout orientation for beginners
               
 ##### Step 5: Replace the following code to res/layout-land/activity_main.xml.
 
+```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -149,7 +151,7 @@ android layout orientation for beginners
             android:textStyle="italic" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </RelativeLayout>
-
+```
 
 ##### Step 6: Replace the following code to res/values/colors.xml.
 
