@@ -8,95 +8,61 @@ android layout orientation for beginners
 ##### Step 2: Add the following code to res/layout/activity_main.xml.
 
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:gravity="center"
+    android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:layout_height="match_parent">
+    android:gravity="center"
+    android:orientation="vertical">
 
-
-    <EditText
-        android:id="@+id/et_user_name"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/shape_corner"
-        android:defaultFocusHighlightEnabled="false"
-        android:hint="Username"
+        android:hint="@string/label_username"
         android:inputType="textPersonName"
-        android:padding="15dp"
+        android:padding="16dp"
+        android:imeOptions="actionNext"
         android:textAllCaps="false"
-        android:textColor="@color/colorPrimary"
-        android:textColorHint="@android:color/white"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorTextHint"
         android:textSize="18sp"
         android:textStyle="italic" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberPassword"
-        android:defaultFocusHighlightEnabled="false"
-        android:textColor="@color/colorPrimary"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/shape_corner"
-        android:padding="15dp"
-        android:textAllCaps="false"
+        android:hint="@string/label_password"
+        android:inputType="numberPassword"
+        android:padding="16dp"
+        android:imeOptions="actionDone"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorTextHint"
         android:textSize="18sp"
-        android:hint="Password"
-        android:textStyle="italic"
-        android:textColorHint="@android:color/white" />
+        android:textStyle="italic" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/buttons"
+        android:paddingStart="64dp"
+        android:paddingEnd="64dp"
+        android:text="@string/label_enter"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="italic" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/signUp_btn"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:defaultFocusHighlightEnabled="false"
-            android:textColor="@android:color/white"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/buttons"
-            android:padding="15dp"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:hint="Sign Up"
-            android:textStyle="italic"
-            android:textColorHint="@android:color/white"/>
-
-        <Button
-            android:id="@+id/signIn_btn"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:inputType="textPersonName"
-            android:defaultFocusHighlightEnabled="false"
-            android:textColor="@android:color/white"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/buttons"
-            android:padding="15dp"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:hint="Sign In"
-            android:textStyle="italic"
-            android:textColorHint="@android:color/white"/>
-
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
 
 
 ##### Step 3: Create *layout-land* directory under *res* directory
@@ -111,108 +77,109 @@ android layout orientation for beginners
 ##### Step 5: Replace the following code to res/layout-land/activity_main.xml.
 
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@drawable/background"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
 
-        <EditText
-            android:id="@+id/et_user_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/shape_corner"
-            android:defaultFocusHighlightEnabled="false"
-            android:hint="Username"
-            android:inputType="textPersonName"
-            android:padding="15dp"
-            android:textAllCaps="false"
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="italic" />
-
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberPassword"
-            android:layout_weight="1"
-            android:defaultFocusHighlightEnabled="false"
-            android:textColor="@color/colorPrimary"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/shape_corner"
-            android:padding="15dp"
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            android:hint="Password"
-            android:textStyle="italic"
-            android:textColorHint="@android:color/white" />
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:orientation="horizontal"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/signUp_btn"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_corner"
+                android:hint="@string/label_username"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_corner"
+                android:hint="@string/label_password"
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
+                android:padding="16dp"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_enter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:defaultFocusHighlightEnabled="false"
-            android:textColor="@android:color/white"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginTop="26dp"
             android:background="@drawable/buttons"
-            android:padding="15dp"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:hint="Sign Up"
-            android:textStyle="italic"
-            android:textColorHint="@android:color/white"/>
-
-        <Button
-            android:id="@+id/signIn_btn"
-            android:layout_width="wrap_content"
-            android:inputType="textPersonName"
-            android:defaultFocusHighlightEnabled="false"
+            android:paddingStart="96dp"
+            android:paddingEnd="96dp"
+            android:text="@string/label_enter"
             android:textColor="@android:color/white"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/buttons"
-            android:padding="15dp"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:hint="Sign In"
-            android:textStyle="italic"
-            android:textColorHint="@android:color/white"/>
-
-    </LinearLayout>
-
-</LinearLayout>
+            android:textSize="24sp"
+            android:textStyle="italic" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>
 
 
+##### Step 6: Replace the following code to res/values/colors.xml.
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#455a64</color>
+    <color name="colorPrimaryDark">#3B5663</color>
+    <color name="colorPrimaryLite">#74718792</color>
+    <color name="colorAccent">#718792</color>
+    <color name="colorText">#FFFFFF</color>
+    <color name="colorTextHint">#C2C1C1</color>
+</resources>
 
 
-##### Step 6: Run app on your device. Voila! It's working!
+
+##### Step 7: Replace the following code to res/values/colors.xml.
+
+<resources>
+    <string name="app_name">android-orientation</string>
+    <string name="label_username">Username</string>
+    <string name="label_password">Password</string>
+    <string name="label_sign_up">Sign Up</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_enter">➣</string>
+</resources>
+
+
+
+##### Step 8: Copy files from res/drawable and paste these to your res/drawable
+
+##### Step 9: Run app on your device. Voila! It's working!
 
 ### NB: Make sure your device orientation is set to auto.
-
