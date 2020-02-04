@@ -153,6 +153,7 @@ android layout orientation for beginners
 
 ##### Step 6: Replace the following code to res/values/colors.xml.
 
+```
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#455a64</color>
@@ -162,11 +163,13 @@ android layout orientation for beginners
     <color name="colorText">#FFFFFF</color>
     <color name="colorTextHint">#C2C1C1</color>
 </resources>
+```
 
 
 
 ##### Step 7: Replace the following code to res/values/colors.xml.
 
+```
 <resources>
     <string name="app_name">android-orientation</string>
     <string name="label_username">Username</string>
@@ -175,7 +178,7 @@ android layout orientation for beginners
     <string name="label_sign_in">Sign In</string>
     <string name="label_enter">➣</string>
 </resources>
-
+```
 
 
 ##### Step 8: Copy files from res/drawable and paste these to your res/drawable
